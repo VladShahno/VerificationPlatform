@@ -24,7 +24,7 @@ public class Company {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
     private List<Address> addressList = new ArrayList<>();
 
-    @Column(name = "company_name")
+    @Column(name = "company_name", nullable = false, unique = true)
     private String companyName;
 
     @Column(name = "industry")

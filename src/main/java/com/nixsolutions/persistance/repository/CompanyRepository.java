@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CompanyRepository extends JpaRepository<Company, Integer> {
 
-    boolean existsByName(String name);
+    boolean existsByCompanyName(String name);
 }

@@ -20,7 +20,7 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     public void create(Company company) {
-        if (!companyRepository.existsByName(company.getCompanyName())) {
+        if (!companyRepository.existsByCompanyName(company.getCompanyName())) {
             companyRepository.save(company);
         } else
             throw new RuntimeException("Company with name - " + company.getCompanyName() + " already exists!");
@@ -29,7 +29,7 @@ public class CompanyServiceImpl implements CompanyService {
     @Override
     public void update(Company company) {
         if (companyRepository.existsById(company.getId())) {
-            if (companyRepository.existsByName(company.getCompanyName())) {
+            if (companyRepository.existsByCompanyName(company.getCompanyName())) {
                 companyRepository.save(company);
             } else
                 throw new RuntimeException("Company with name - " + company.getCompanyName() + " does not exist!");

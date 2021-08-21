@@ -8,5 +8,4 @@ import org.springframework.stereotype.Repository;
 public interface LeadRepository extends JpaRepository<Lead, Integer> {
 
     boolean existsByEmail(String email);
-
 }
