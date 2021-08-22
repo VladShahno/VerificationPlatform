@@ -1,4 +1,4 @@
-package com.nixsolutions.util;
+package com.nixsolutions.platform.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.context.request.WebRequest;

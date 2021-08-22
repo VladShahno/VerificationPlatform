@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.Collections;
 import java.util.List;
 
-import static com.nixsolutions.util.WebRequestUtil.*;
+import static com.nixsolutions.platform.util.WebRequestUtil.*;
 
 @Getter
 @Setter
