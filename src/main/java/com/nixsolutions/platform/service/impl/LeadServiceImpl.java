@@ -1,8 +1,8 @@
-package com.nixsolutions.persistance.service.impl;
+package com.nixsolutions.platform.service.impl;
 
-import com.nixsolutions.persistance.entity.Lead;
-import com.nixsolutions.persistance.repository.LeadRepository;
-import com.nixsolutions.persistance.service.LeadService;
+import com.nixsolutions.platform.persistence.entity.Lead;
+import com.nixsolutions.platform.persistence.repository.LeadRepository;
+import com.nixsolutions.platform.service.LeadService;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

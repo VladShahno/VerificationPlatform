@@ -1,4 +1,4 @@
-package com.nixsolutions.persistance.entity;
+package com.nixsolutions.platform.persistence.entity;
 
 import lombok.Getter;
 import lombok.Setter;

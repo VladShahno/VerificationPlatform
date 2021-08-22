@@ -1,8 +1,8 @@
-package com.nixsolutions.persistance.service.impl;
+package com.nixsolutions.platform.service.impl;
 
-import com.nixsolutions.persistance.entity.Address;
-import com.nixsolutions.persistance.repository.AddressRepository;
-import com.nixsolutions.persistance.service.AddressService;
+import com.nixsolutions.platform.persistence.entity.Address;
+import com.nixsolutions.platform.persistence.repository.AddressRepository;
+import com.nixsolutions.platform.service.AddressService;
 
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;

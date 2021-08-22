@@ -1,6 +1,6 @@
-package com.nixsolutions.persistance.service;
+package com.nixsolutions.platform.service;
 
-import com.nixsolutions.persistance.entity.Company;
+import com.nixsolutions.platform.persistence.entity.Company;
 import org.springframework.data.domain.Page;
 
 import java.util.Map;

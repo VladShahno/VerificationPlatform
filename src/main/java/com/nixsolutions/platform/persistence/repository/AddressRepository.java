@@ -1,6 +1,6 @@
-package com.nixsolutions.persistance.repository;
+package com.nixsolutions.platform.persistence.repository;
 
-import com.nixsolutions.persistance.entity.Address;
+import com.nixsolutions.platform.persistence.entity.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

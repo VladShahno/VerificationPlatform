@@ -1,8 +1,8 @@
-package com.nixsolutions.persistance.service.impl;
+package com.nixsolutions.platform.service.impl;
 
-import com.nixsolutions.persistance.entity.Company;
-import com.nixsolutions.persistance.repository.CompanyRepository;
-import com.nixsolutions.persistance.service.CompanyService;
+import com.nixsolutions.platform.persistence.entity.Company;
+import com.nixsolutions.platform.persistence.repository.CompanyRepository;
+import com.nixsolutions.platform.service.CompanyService;
 
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;

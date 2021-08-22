@@ -1,4 +1,4 @@
-package com.nixsolutions.persistance.service;
+package com.nixsolutions.platform.service;
 
 import org.springframework.data.domain.Page;
 
