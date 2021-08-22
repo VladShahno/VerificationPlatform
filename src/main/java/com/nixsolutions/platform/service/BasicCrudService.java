@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 
 import java.util.Map;
 
-public interface BasicCrudService<T> {
+interface BasicCrudService<T> {
 
     void create(T t);
 
