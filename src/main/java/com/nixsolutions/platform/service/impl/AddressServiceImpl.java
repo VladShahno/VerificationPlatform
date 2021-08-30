@@ -49,4 +49,9 @@ public class AddressServiceImpl implements AddressService {
         } else
             throw new RuntimeException("Address with id - " + id + " does not exist!");
     }
+
+    @Override
+    public Page<Address> find(Map<String, String> params) {
+        return null;
+    }
 }

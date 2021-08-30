@@ -14,4 +14,5 @@ interface BasicCrudService<T> {
 
     T find(Integer id);
 
+    Page<T> find(Map<String, String> params);
 }

@@ -19,4 +19,6 @@ public interface CompanyService extends BasicCrudService<Company> {
     @Override
     Company find(Integer id);
 
+    @Override
+    Page<Company> find(Map<String, String> params);
 }

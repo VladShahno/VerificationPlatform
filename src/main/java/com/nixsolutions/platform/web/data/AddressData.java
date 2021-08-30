@@ -14,7 +14,6 @@ import java.util.Date;
 public class AddressData {
 
     private Integer id;
-    private String country;
     private String street;
     private String city;
     private String state;
@@ -26,7 +25,6 @@ public class AddressData {
     public AddressData(Address address) {
 
         this.id = address.getId();
-        this.country = address.getCountry();
         this.street = address.getStreet();
         this.city = address.getCity();
         this.state = address.getState();

@@ -9,8 +9,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import static com.nixsolutions.platform.util.WebRequestUtil.*;
-
 import java.util.Map;
 
 @Service
@@ -59,13 +57,8 @@ public class LeadServiceImpl implements LeadService {
 
     @Override
     public Page<Lead> find(Map<String, String> params) {
-        int page = Integer.parseInt(params.get(PAGE_PARAM));
-        int size = Integer.parseInt(params.get(SIZE_PARAM));
-        String order = params.get(ORDER_PARAM);
-        String sort = params.get(SORT_PARAM);
-        if (order.equals(DEFAULT_ORDER_PARAM_VALUE)) {
-            return leadRepository.findAll(PageRequest.of(page - 1, size, Sort.by(Sort.Order.desc(sort))));
-        }
-        return leadRepository.findAll(PageRequest.of(page - 1, size, Sort.by(Sort.Order.asc(sort))));
+        return leadRepository.findAll(PageRequest.of(0, 10, Sort.by(Sort.Order.desc("id"))));
     }
+
+
 }

@@ -19,4 +19,6 @@ public interface AddressService extends BasicCrudService<Address> {
     @Override
     Address find(Integer id);
 
+    @Override
+    Page<Address> find(Map<String, String> params);
 }

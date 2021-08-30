@@ -17,11 +17,8 @@ public class Address {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "company_id")
+    @JoinColumn(name = "address_id")
     private Company company;
-
-    @Column(name = "country")
-    private String country;
 
     @Column(name = "street")
     private String street;
