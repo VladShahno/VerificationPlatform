@@ -1,10 +1,13 @@
 package com.nixsolutions.platform.facade;
 
+import com.nixsolutions.platform.persistence.entity.Address;
+import com.nixsolutions.platform.web.data.AddressData;
+import com.nixsolutions.platform.web.data.CompanyData;
 import com.nixsolutions.platform.web.data.LeadData;
 import com.nixsolutions.platform.web.data.PageData;
 import org.springframework.web.context.request.WebRequest;
 
-public interface LeadFacade extends BasicFacade<LeadData>{
+public interface LeadFacade extends BasicFacade<LeadData> {
 
     @Override
     void create(LeadData leadData);
