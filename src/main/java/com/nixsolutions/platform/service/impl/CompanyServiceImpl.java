@@ -52,9 +52,4 @@ public class CompanyServiceImpl implements CompanyService {
         } else
             throw new RuntimeException("Company with id - " + id + " does not exist!");
     }
-
-    @Override
-    public Page<Company> find(Map<String, String> params) {
-        return null;
-    }
 }

@@ -35,7 +35,7 @@ public class PageData<E> {
         this.showPrevious = false;
         this.showNext = false;
         this.showLast = false;
-        this.pageSizeList = new int[]{10, 25, 50, 100};
+        this.pageSizeList = new int[] { 10, 25, 50, 100 };
         this.sort = DEFAULT_SORT_PARAM_VALUE;
         this.order = DEFAULT_ORDER_PARAM_VALUE;
         this.items = Collections.emptyList();

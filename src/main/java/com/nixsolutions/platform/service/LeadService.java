@@ -19,6 +19,5 @@ public interface LeadService extends BasicCrudService<Lead> {
     @Override
     Lead find(Integer id);
 
-    @Override
     Page<Lead> find(Map<String, String> params);
 }
