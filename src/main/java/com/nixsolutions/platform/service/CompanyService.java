@@ -1,9 +1,6 @@
 package com.nixsolutions.platform.service;
 
 import com.nixsolutions.platform.persistence.entity.Company;
-import org.springframework.data.domain.Page;
-
-import java.util.Map;
 
 public interface CompanyService extends BasicCrudService<Company> {
 
@@ -18,5 +15,4 @@ public interface CompanyService extends BasicCrudService<Company> {
 
     @Override
     Company find(Integer id);
-
 }

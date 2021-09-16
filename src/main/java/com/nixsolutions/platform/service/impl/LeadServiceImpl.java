@@ -4,6 +4,9 @@ import com.nixsolutions.platform.persistence.entity.Lead;
 import com.nixsolutions.platform.persistence.repository.LeadRepository;
 import com.nixsolutions.platform.service.LeadService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -16,6 +19,8 @@ import java.util.Map;
 @Service
 public class LeadServiceImpl implements LeadService {
 
+    private static final Logger log = LoggerFactory.getLogger("log");
+
     private final LeadRepository leadRepository;
 
     public LeadServiceImpl(LeadRepository leadRepository) {
@@ -25,7 +30,9 @@ public class LeadServiceImpl implements LeadService {
     @Override
     public void create(Lead lead) {
         if (!leadRepository.existsByEmail(lead.getEmail())) {
+            log.info("Creating of lead with id - " + lead.getId());
             leadRepository.save(lead);
+            log.info("The lead was created!");
         } else
             throw new RuntimeException("Lead with email - " + lead.getEmail() + " already exists!");
     }
@@ -34,7 +41,9 @@ public class LeadServiceImpl implements LeadService {
     public void update(Lead lead) {
         if (leadRepository.existsById(lead.getId())) {
             if (leadRepository.existsByEmail(lead.getEmail())) {
+                log.info("Updating of lead with id - " + lead.getId());
                 leadRepository.save(lead);
+                log.info("The lead was updated!");
             } else
                 throw new RuntimeException("Lead with email - " + lead.getEmail() + " does not exist!");
         } else
@@ -44,7 +53,9 @@ public class LeadServiceImpl implements LeadService {
     @Override
     public void delete(Integer id) {
         if (leadRepository.existsById(id)) {
+            log.warn("Deleting of lead with id - " + id);
             leadRepository.deleteById(id);
+            log.warn("The lead was deleted!");
         } else
             throw new RuntimeException("Lead with id - " + id + " does not exist!");
     }
@@ -52,6 +63,7 @@ public class LeadServiceImpl implements LeadService {
     @Override
     public Lead find(Integer id) {
         if (leadRepository.existsById(id)) {
+            log.info("Finding of lead with id - " + id);
             return leadRepository.getById(id);
         }
         throw new RuntimeException("Lead with id - " + id + " does not exist!");

@@ -1,6 +1,7 @@
 package com.nixsolutions.platform.service;
 
 import com.nixsolutions.platform.persistence.entity.Lead;
+
 import org.springframework.data.domain.Page;
 
 import java.util.Map;

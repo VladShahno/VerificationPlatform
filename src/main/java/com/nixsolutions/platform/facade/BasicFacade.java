@@ -1,7 +1,6 @@
 package com.nixsolutions.platform.facade;
 
-import com.nixsolutions.platform.web.data.CompanyData;
-import com.nixsolutions.platform.web.data.PageData;
+import com.nixsolutions.platform.web.dto.PageData;
 import org.springframework.web.context.request.WebRequest;
 
 interface BasicFacade<T> {
