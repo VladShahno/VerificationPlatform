@@ -1,5 +1,7 @@
 package com.nixsolutions.platform.persistence.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,9 +20,11 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
     private List<Lead> leadList = new ArrayList<>();
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
     private List<Address> addressList = new ArrayList<>();
 
