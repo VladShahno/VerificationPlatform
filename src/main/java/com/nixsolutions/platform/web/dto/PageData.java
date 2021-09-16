@@ -1,4 +1,4 @@
-package com.nixsolutions.platform.web.data;
+package com.nixsolutions.platform.web.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.nixsolutions.platform.web.data;
+package com.nixsolutions.platform.web.dto;
 
 import com.nixsolutions.platform.persistence.entity.Company;
 
@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CompanyData {
+public class CompanyDto {
 
     private Integer id;
     private String companyName;
@@ -24,7 +24,7 @@ public class CompanyData {
     private Date created;
     private Date updated;
 
-    public CompanyData(Company company) {
+    public CompanyDto(Company company) {
 
         this.id = company.getId();
         this.companyName = company.getCompanyName();

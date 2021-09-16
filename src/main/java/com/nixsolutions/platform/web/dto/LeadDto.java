@@ -1,23 +1,19 @@
-package com.nixsolutions.platform.web.data;
+package com.nixsolutions.platform.web.dto;
 
+import com.nixsolutions.platform.persistence.entity.Address;
+import com.nixsolutions.platform.persistence.entity.Company;
 import com.nixsolutions.platform.persistence.entity.Lead;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class LeadData {
-
-    @Autowired
-    private final AddressData addressData = new AddressData();
-    @Autowired
-    private final CompanyData companyData = new CompanyData();
+public class LeadDto {
 
     private Integer id;
     private String firstName;
@@ -29,8 +25,10 @@ public class LeadData {
     private String leadComments;
     private Date created;
     private Date updated;
+    private Company companyData;
+    private Address addressData;
 
-    public LeadData(Lead lead) {
+    public LeadDto(Lead lead) {
 
         this.id = lead.getId();
         this.firstName = lead.getFirstName();
@@ -42,5 +40,7 @@ public class LeadData {
         this.leadComments = lead.getLeadComments();
         this.created = lead.getCreated();
         this.updated = lead.getUpdated();
+        this.companyData = lead.getCompany();
+        this.addressData = lead.getAddress();
     }
 }

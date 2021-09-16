@@ -1,4 +1,4 @@
-package com.nixsolutions.platform.web.data;
+package com.nixsolutions.platform.web.dto;
 
 import com.nixsolutions.platform.persistence.entity.Address;
 
@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-public class AddressData {
+public class AddressDto {
 
     private Integer id;
     private String country;
@@ -23,7 +23,7 @@ public class AddressData {
     private Date created;
     private Date updated;
 
-    public AddressData(Address address) {
+    public AddressDto(Address address) {
 
         this.id = address.getId();
         this.country = address.getCountry();
