@@ -68,8 +68,8 @@ public class ContactFacadeImpl implements ContactFacade {
 
             companyService.update(company);
             address.setCompany(company);
-            lead.setAddress(address);
             addressService.update(address);
+            lead.setAddress(address);
             lead.setCompany(company);
             leadService.update(lead);
         }
