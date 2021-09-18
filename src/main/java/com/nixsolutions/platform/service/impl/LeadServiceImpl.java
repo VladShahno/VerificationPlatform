@@ -30,7 +30,7 @@ public class LeadServiceImpl implements LeadService {
     @Override
     public void create(Lead lead) {
         if (!leadRepository.existsByEmail(lead.getEmail())) {
-            log.info("Creating of lead with id - " + lead.getId());
+            log.info("Creating of lead with email - " + lead.getEmail());
             leadRepository.save(lead);
             log.info("The lead was created!");
         } else
@@ -41,7 +41,7 @@ public class LeadServiceImpl implements LeadService {
     public void update(Lead lead) {
         if (leadRepository.existsById(lead.getId())) {
             if (leadRepository.existsByEmail(lead.getEmail())) {
-                log.info("Updating of lead with id - " + lead.getId());
+                log.info("Updating of lead with email - " + lead.getEmail());
                 leadRepository.save(lead);
                 log.info("The lead was updated!");
             } else

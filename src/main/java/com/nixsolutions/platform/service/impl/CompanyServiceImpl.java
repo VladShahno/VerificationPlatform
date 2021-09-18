@@ -23,7 +23,7 @@ public class CompanyServiceImpl implements CompanyService {
     @Override
     public void create(Company company) {
         if (!companyRepository.existsByCompanyName(company.getCompanyName())) {
-            log.info("Creating of company with id - " + company.getId());
+            log.info("Creating of company with name - " + company.getCompanyName());
             companyRepository.save(company);
             log.info("The company was created!");
         } else
@@ -33,7 +33,7 @@ public class CompanyServiceImpl implements CompanyService {
     @Override
     public void update(Company company) {
         if (companyRepository.existsById(company.getId())) {
-                log.info("Updating of company with id - " + company.getId());
+                log.info("Updating of company with name - " + company.getCompanyName());
                 companyRepository.save(company);
                 log.info("The company was updated!");
             } else
